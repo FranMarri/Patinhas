@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Pet Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="assets/doglogin.png" alt="Imagem de cadastro" class="login-image-centralizada">
+        <h1>Cadastro</h1>
+        <form action="/cadastro" method="POST">
+            <input type="text" id="username" name="username" placeholder="Usuário ou E-mail" required>
+            <input type="password" id="password" name="password" placeholder="Senha" required>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Repita sua senha" required>
+            <button type="submit">Salvar</button>
+        </form>
+        <a href="login.html">Voltar </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios - Pet Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Relatórios</h1>
+        <div class="filters">
+            <form id="filtroForm" action="gerar_relatorio.php" method="POST">
+                <select id="filtro" name="filtro">
+                    <option value="usuarios">Usuários</option>
+                    <option value="animais">Animais</option>
+                    <option value="produtos">Produtos</option>
+                </select>
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
+        <div id="resultado"></div>
+    </div>
+</body>
+</html>

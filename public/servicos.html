@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Serviços</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agendamento de Serviços</h1>
+        <form id="agendamentoForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="cpfCliente">CPF:</label>
+                <input type="text" id="cpfCliente" name="cpfCliente" required>
+            </div>
+            <div class="form-group">
+                <label for="nomeCliente">Nome do Cliente:</label>
+                <input type="text" id="nomeCliente" name="nomeCliente" required>
+            </div>
+            <div class="form-group">
+                <label for="nomeAnimal">Nome do Animal:</label>
+                <input type="text" id="nomeAnimal" name="nomeAnimal" required>
+            </div>
+            <div class="form-group">
+                <label for="tipoServico">Tipo de Serviço:</label>
+                <select id="tipoServico" name="tipoServico" required>
+                    <option value="">Selecione o tipo de serviço</option>
+                    <option value="banhoTosa">Banho e Tosa</option>
+                    <option value="banhoAvulso">Banho Avulso</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+            </div>
+            <div class="form-group">
+                <label for="horario">Horário:</label>
+                <input type="time" id="horario" name="horario" required>
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor:</label>
+                <input type="text" id="valor" name="valor" required>
+            </div>
+            <div class="btn-group">
+                <button type="submit">Salvar</button>
+                <button type="button" onclick="window.location.href='menu.html'">Voltar</button>
+            </div>
+        </form>
+        <div id="mensagem" class="mensagem"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Animal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Animal</h1>
+        <form id="cadastroAnimalForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="cpfDono">CPF do Dono:</label>
+                <input type="text" id="cpfDono" name="cpfDono" required>
+            </div>           
+            <div class="form-group">
+                <label for="nomeAnimal">Nome:</label>
+                <input type="text" id="nomeAnimal" name="nomeAnimal" required>
+            </div>
+            <div class="form-group">
+                <label for="racaAnimal">Raça:</label>
+                <input type="text" id="racaAnimal" name="racaAnimal" required>
+            </div>
+            <div class="form-group">
+                <label for="idadeAnimal">Idade:</label>
+                <input type="number" id="idadeAnimal" name="idadeAnimal" required>
+            </div>
+            <div class="form-group">
+                <label for="sexoAnimal">Sexo:</label>
+                <select id="sexoAnimal" name="sexoAnimal" required>
+                    <option value="macho">Macho</option>
+                    <option value="femea">Fêmea</option>
+                </select>
+            </div>
+           
+            <div class="btn-group">
+                <button type="submit">Salvar </button>
+                <button type="button" onclick="window.location.href='menu.html'">Voltar</button>
+            </div>
+        </form>
+        <div id="mensagem" class="mensagem"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Shop - Clientes</title>
+</head>
+<body>
+    <h1>Clientes</h1>
+
+    <!-- Formulário para adicionar um cliente -->
+    <h2>Adicionar Cliente</h2>
+    <form action="/clientes" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required><br>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required><br>
+
+        <button type="submit">Adicionar Cliente</button>
+    </form>
+
+    <!-- Formulário para listar todos os clientes -->
+    <h2>Listar Clientes</h2>
+    <button onclick="listarClientes()">Listar Clientes</button>
+    <ul id="clientes-list"></ul>
+
+    <script>
+        // Função para listar todos os clientes
+        function listarClientes() {
+            fetch('/clientes')
+            .then(response => response.json())
+            .then(data => {
+                const clientesList = document.getElementById('clientes-list');
+                clientesList.innerHTML = ''; // Limpar a lista antes de adicionar os novos clientes
+
+                data.forEach(cliente => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `Nome: ${cliente.nome}, CPF: ${cliente.cpf}, Endereço: ${cliente.endereco}, Telefone: ${cliente.telefone}`;
+                    clientesList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
